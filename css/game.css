@@ -1,8 +1,8 @@
 /* =========================================
    ИМПОРТ ШРИФТОВ И ПЕРЕМЕННЫЕ
 ========================================= */
+ 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
-
 :root {
     --main-color: rgb(127, 88, 21);
     --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
@@ -10,6 +10,28 @@
     --border: .2rem solid var(--main-color);
     --border-hover: .2rem dashed var(--main-color);
     --bg-color: #fdfaf0;
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   МИНИ-ИГРА (game.css)
+========================================= */
+.game-controls { padding: 0 2rem; }
+#puzzle-title { text-transform: uppercase; }
+#puzzle-desc { text-transform: none; }
+
+/* Центрирование доски */
+#myBoard { width: 400px; max-width: 100%; margin: 0 auto; }
+
+/* АДАПТИВНОСТЬ ИГРЫ ДЛЯ ТЕЛЕФОНОВ */
+@media (max-width: 450px) {
+    #myBoard { width: 100% !important; }
 }
 
 
@@ -22,7 +44,7 @@
     margin: 0; padding: 0;
     box-sizing: border-box; outline: none; border: none;
     text-decoration: none; text-transform: capitalize;
-    transition: all .2s linear;
+    transition: all .0,5s linear;
 }
 
 html {
@@ -128,51 +150,6 @@ section { padding: 2rem 9%; }
 .about .row .content .icons-container .icons img { height: 5rem; }
 .about .row .content .icons-container .icons h3 { font-size: 1.7rem; padding-top: 1rem; color: var(--main-color); }
 
-
-
-
-                .chapter-btn {
-                    background: none;
-                    text-align: left;
-                    font-size: 2.2rem;
-                    color: var(--main-color);
-                    opacity: 0.5;
-                    cursor: pointer;
-                    padding: 1rem 0;
-                    border-bottom: .1rem solid rgba(127, 88, 21, 0.2);
-                    font-family: 'Poppins', sans-serif;
-                    text-transform: uppercase;
-                }
-
-                .chapter-btn:hover {
-                    opacity: 0.8;
-                    padding-left: 1rem;
-                }
-
-                .chapter-btn.active {
-                    opacity: 1;
-                    font-weight: 600;
-                    font-size: 2.8rem;
-                    border-bottom: .2rem solid var(--main-color);
-                    padding-left: 1.5rem;
-                }
-
-                .fade-in {
-                    animation: fadeIn 0.8s ease forwards;
-                }
-
-                @keyframes fadeIn {
-                    0% {
-                        opacity: 0;
-                        transform: scale(1.02);
-                    }
-
-                    100% {
-                        opacity: 1;
-                        transform: scale(1);
-                    }
-                }
-
 /* =========================================
    СЕКЦИЯ: MENU (Товары на главной)
 ========================================= */
@@ -259,4 +236,8 @@ section { padding: 2rem 9%; }
 @media (max-width: 450px) {
     html { font-size: 50%; }
     .home .row .image img { height: auto; width: 100%; }
+}
+/* Скрываем подвал на всех страницах */
+.footer {
+    display: none !important;
 }

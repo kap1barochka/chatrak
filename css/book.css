@@ -1,0 +1,43 @@
+  .booking-type-selector {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .booking-type-selector input[type="radio"] {
+            display: none; /* Прячем стандартные кружочки радиокнопок */
+        }
+
+        .booking-type-selector label {
+            padding: 1.5rem 3rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--main-color);
+            background: rgba(255, 255, 255, 0.8);
+            border: var(--border);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Когда радио-кнопка выбрана, меняем стиль её метки (label) */
+        .booking-type-selector input[type="radio"]:checked + label {
+            background: var(--main-color);
+            color: #fff;
+            border-radius: var(--border-radius-hover);
+        }
+
+        /* Скрытые поля для турнира */
+        #tournament-fields {
+            display: none;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }

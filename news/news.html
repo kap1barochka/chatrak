@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatrak | Chess Chronicle</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/news.css">
+</head>
+<body style="background-color: var(--bg-color);">
+
+    <div id="preloader">
+        <div class="loader-chess"><i class="fas fa-chess-knight"></i></div>
+    </div>
+
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="../index.html" class="logo">Chatrak <i class="fas fa-chess-knight"></i></a>
+        
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="../Shop/Shop.html">Shop</a>
+            <a href="#">News</a>
+            <a href="../Book/Book.html">Book</a>
+        </nav>
+        
+        <button id="login-btn" class="btn" style="font-size: 1.7rem; font-weight: 500;">Sign In</button>
+    </header>
+
+    <section class="news-journal" style="padding-top: 12rem;">
+        
+        <div class="journal-header">
+            <h1 class="heading">The Chatrak <span>Chronicle</span></h1>
+            <p>Your ultimate source for modern tournaments, player psychology, and the evolution of the game.</p>
+        </div>
+
+        <div class="tournament-spotlight">
+            <div class="spotlight-content">
+                <span class="badge">Official Chatrak Event</span>
+                <h2>The Chatrak Grand Master Open 2026</h2>
+                <p>Join the most prestigious chess tournament of the year in Armenia. Face off against the best minds, win exclusive Chatrak crafted sets, and claim your share of the ֏4,000,000 prize pool. Limited seats available.</p>
+                
+                <div class="spotlight-details">
+                    <div><i class="fas fa-calendar-alt"></i> August 15-20, 2026</div>
+                    <div><i class="fas fa-map-marker-alt"></i> Tigran Petrosian Chess House</div>
+                    <div><i class="fas fa-trophy"></i> ֏4,000,000 Prize Pool</div>
+                </div>
+                
+                <a href="../Book/Book.html?type=tournament" class="btn spotlight-btn">Register Now</a>
+            </div>
+        </div>
+
+        <div class="news-filters">
+            <button class="filter-btn active" data-filter="all">All News</button>
+            <button class="filter-btn" data-filter="events">Tournaments</button>
+            <button class="filter-btn" data-filter="players">Grandmasters</button>
+            <button class="filter-btn" data-filter="tech">Science & AI</button>
+        </div>
+
+        <div class="journal-grid">
+            
+            <article class="news-card hero-card" data-category="events">
+                <div class="card-image">
+                    <img src="../image/Chess-Woman.jpg" alt="World Championship">
+                    <span class="category-badge">Tournaments</span>
+                </div>
+                <div class="card-content">
+                    <div class="meta">April 18, 2026 • By Chatrak Editorial</div>
+                    <h2>The 2026 World Chess Championship: A New Era Begins</h2>
+                    <p>The tension is palpable as the world's finest minds clash in the ultimate test of strategy. With traditional openings being heavily scrutinized, players are resorting to psychological warfare and obscure middle-game structures to break the symmetry...</p>
+                    <a href="#" class="read-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="players">
+                <div class="card-image">
+                    <img src="../image/Magnus.jpg" alt="Magnus Carlsen">
+                    <span class="category-badge">Grandmasters</span>
+                </div>
+                <div class="card-content">
+                    <div class="meta">April 15, 2026</div>
+                    <h2>Carlsen Dominates Rapid Circuit</h2>
+                    <p>Magnus continues to prove that instinct and speed are just as crucial as deep calculation in the modern era of chess.</p>
+                    <a href="#" class="read-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="tech">
+                <div class="card-image">
+                    <img src="../image/Elektro.jpg" alt="AI in Chess">
+                    <span class="category-badge">Science & AI</span>
+                </div>
+                <div class="card-content">
+                    <div class="meta">April 10, 2026</div>
+                    <h2>Neural Networks Redefining Theory</h2>
+                    <p>How deep learning algorithms and custom engines are creating completely new paradigms in opening preparation.</p>
+                    <a href="#" class="read-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="players">
+                <div class="card-image">
+                    <img src="../image/Tail.jpg" alt="Mikhail Tal">
+                    <span class="category-badge">Grandmasters</span>
+                </div>
+                <div class="card-content">
+                    <div class="meta">April 05, 2026</div>
+                    <h2>The Psychology of the Attack: Mikhail Tal</h2>
+                    <p>Analyzing the social and psychological pressure applied by the "Magician from Riga" during his most complex sacrifices.</p>
+                    <a href="#" class="read-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="news-card" data-category="events">
+                <div class="card-image">
+                    <img src="../image/Nakamura.jpg" alt="Local Tournament">
+                    <span class="category-badge">Tournaments</span>
+                </div>
+                <div class="card-content">
+                    <div class="meta">April 01, 2026</div>
+                    <h2>Yerevan Open Sets New Attendance Record</h2>
+                    <p>The capital of chess gathers over 500 participants, bridging the gap between young prodigies and seasoned veterans.</p>
+                    <a href="#" class="read-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <div id="auth-modal" class="modal-overlay">
+        <div class="auth-box">
+            <span id="close-modal" class="fas fa-times"></span>
+            
+            <h2 id="modal-title" style="color: var(--dark-brown); font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">Sign In</h2>
+            <p id="modal-subtitle" style="font-size: 1.5rem; color: #888; margin-bottom: 3rem;">Enter your credentials to continue</p>
+
+            <form id="auth-form">
+                <div class="input-group" id="name-group" style="display: none;">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="auth-name" class="auth-input" placeholder="Your Full Name">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="auth-email" class="auth-input" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="auth-password" class="auth-input" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="auth-btn" id="auth-submit-btn">Login</button>
+            </form>
+
+            <div class="auth-footer">
+                <span id="auth-toggle-text">Don't have an account?</span>
+                <a href="#" id="auth-toggle-link">Sign Up</a>
+            </div>
+            <p id="auth-error" style="color: #d9534f; font-size: 1.3rem; margin-top: 1.5rem; font-weight: 600; display: none;"></p>
+        </div>
+    </div>
+
+
+
+
+<div id="article-modal" class="modal-overlay">
+        <div class="article-box">
+            <span class="fas fa-times" id="close-article"></span>
+            <img id="article-img" src="" alt="Article Image">
+            <div class="article-content">
+                <span id="article-category" class="category-badge" style="position: relative; top: 0; left: 0; display: inline-block; margin-bottom: 1rem;"></span>
+                <p id="article-meta" class="meta" style="color: #888; font-size: 1.2rem; margin-bottom: 1rem;"></p>
+                <h2 id="article-title" style="font-size: 2.8rem; color: var(--dark-brown); margin-bottom: 2rem;"></h2>
+                <div id="article-body" style="font-size: 1.5rem; color: #555; line-height: 1.8;"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="footer">
+        <div class="credit">created by <span>Chatrak Team</span> | all rights reserved</div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+    
+    <script src="../js/script.js"></script>
+    <script src="../js/news.js"></script>
+
+</body>
+</html>

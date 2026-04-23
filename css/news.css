@@ -1,0 +1,369 @@
+/* =========================================
+   НОВОСТИ И ЖУРНАЛ (news.css)
+========================================= */
+.journal-header {
+    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto 4rem;
+}
+
+.journal-header p {
+    font-size: 1.6rem;
+    color: #666;
+    margin-top: 1.5rem;
+    line-height: 1.8;
+    text-transform: none;
+}
+
+.tournament-spotlight {
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+    background: linear-gradient(rgba(20, 15, 10, 0.85), rgba(20, 15, 10, 0.85)), url('../pattern/Ablojkeq/tourtament.jpg') no-repeat center center/cover;
+    border-radius: 12px;
+    padding: 6rem 4rem;
+    color: #fff;
+    text-align: center;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.tournament-spotlight .badge {
+    background: var(--main-color);
+    color: #fff;
+    padding: 0.6rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+}
+
+.tournament-spotlight h2 {
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.tournament-spotlight p {
+    font-size: 1.6rem;
+    color: #ddd;
+    max-width: 80rem;
+    margin: 0 auto 4rem;
+    line-height: 1.8;
+    text-transform: none;
+}
+
+.spotlight-details {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.spotlight-details div {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #fdfaf0;
+    font-weight: 500;
+}
+
+.spotlight-details i {
+    color: var(--main-color);
+    font-size: 2.4rem;
+}
+
+.spotlight-btn {
+    background: var(--main-color);
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 1.2rem 4rem;
+    border-color: #fff;
+}
+
+.spotlight-btn:hover {
+    background: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.news-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.filter-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--main-color);
+    background: transparent;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--main-color);
+    color: #fff;
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
+}
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+}
+
+.news-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    opacity: 0;
+    animation: slideUpFade 0.8s ease-out forwards;
+}
+
+.news-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.news-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.news-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.news-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.news-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(127, 88, 21, 0.3);
+}
+
+.card-image {
+    position: relative;
+    height: 22rem;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.news-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+.category-badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: var(--main-color);
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.card-content {
+    padding: 2.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content .meta {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 1rem;
+    text-transform: none;
+}
+
+.card-content h2 {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    text-transform: none;
+}
+
+.card-content p {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    text-transform: none;
+}
+
+.read-link {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.read-link:hover {
+    gap: 1.5rem;
+}
+
+/* АДАПТИВНОСТЬ НОВОСТЕЙ */
+@media (min-width: 992px) {
+    .hero-card {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .hero-card .card-image {
+        height: 35rem;
+    }
+
+    .hero-card h2 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .journal-grid {
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+    }
+
+    .hero-card {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .hero-card .card-image {
+        height: 22rem;
+    }
+
+    .hero-card h2 {
+        font-size: 2.2rem;
+    }
+
+    .tournament-spotlight {
+        padding: 4rem 2rem;
+        margin: 0 2rem 5rem;
+    }
+
+    .tournament-spotlight h2 {
+        font-size: 3rem;
+    }
+
+    .spotlight-details {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+}
+
+
+/* =========================================
+   ОКНО ЧТЕНИЯ СТАТЬИ
+========================================= */
+.article-box {
+    background: #fff;
+    width: 90%;
+    max-width: 80rem;
+    max-height: 90vh;
+    border-radius: 20px;
+    overflow-y: auto;
+    position: relative;
+    animation: modalShow 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+#close-article {
+    position: sticky;
+    top: 2rem; /* На каком расстоянии от верха прилипнет кнопка */
+    float: right; /* Прижимаем её вправо */
+    margin-right: 2rem; 
+    margin-bottom: -5rem; /* Чтобы картинка не съехала вниз из-за кнопки */
+    font-size: 2.5rem;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100; /* Держим поверх текста и картинки */
+    transition: 0.3s;
+}
+
+#close-article:hover {
+    background: var(--main-color);
+    transform: rotate(90deg);
+}
+
+#article-img {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 4rem;
+}
+
+/* Кастомизация скроллбара для окна */
+.article-box::-webkit-scrollbar { width: 8px; }
+.article-box::-webkit-scrollbar-thumb { background: var(--main-color); border-radius: 10px; }
+
+@media (max-width: 768px) {
+    .article-content { padding: 2rem; }
+    #article-img { height: 25rem; }
+    #article-title { font-size: 2.2rem !important; }
+}

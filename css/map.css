@@ -1,0 +1,111 @@
+/* =========================================
+   ИМПОРТ ШРИФТОВ И ПЕРЕМЕННЫЕ
+========================================= */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+:root {
+    --main-color: rgb(127, 88, 21);
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+    --bg-color: #fdfaf0;
+}
+
+/* =========================================
+   КАРТА И МЕСТА (map.css)
+========================================= */
+.places-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem 5rem 2rem;
+    height: 600px;
+}
+
+.places-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.place-card {
+    background: #fff;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.place-card:hover {
+    background: var(--main-color);
+    color: #fff;
+    transform: translateX(10px);
+}
+
+.place-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: inherit;
+    text-transform: none;
+}
+
+.place-card p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-transform: none;
+}
+
+.map-box {
+    flex: 2;
+    border-radius: 10px;
+    border: 2px solid var(--main-color);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.custom-map-icon i {
+    color: var(--main-color);
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.places-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.places-list::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
+}
+
+/* АДАПТИВНОСТЬ КАРТЫ */
+@media (max-width: 768px) {
+    .places-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .places-list {
+        max-height: 350px;
+    }
+
+    .map-box {
+        height: 400px;
+    }
+}
+
+@media (max-width: 450px) {
+    .map-box {
+        height: 300px;
+    }
+}

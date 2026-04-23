@@ -7,41 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatrak</title>
 
-    <!-- SWIPER -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
-    <!-- Font Awesome CDN Link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Custom CSS File Link  -->
     <link rel="stylesheet" href="css/Home.css">
-
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <div id="preloader">
+        <div class="loader-chess">
+            <i class="fas fa-chess-knight"></i>
+        </div>
+    </div>
+
     <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
 
-        <a href="Home.html" class="logo">Chatrak <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(127, 88, 21)" d="M232 120L232 160L153.9 160C139.6 160 128 171.6 128 185.9C128 189.9 128.9 193.9 130.7 197.5L164.1 264.3C152.7 266.1 143.9 276 143.9 288C143.9 301.3 154.6 312 167.9 312L173.5 312L159.9 448L103.7 518.3C98.7 524.6 95.9 532.4 95.9 540.5C95.9 560.1 111.8 576 131.4 576L380.3 576C399.9 576 415.8 560.1 415.8 540.5C415.8 532.4 413.1 524.6 408 518.3L352 448L338.4 312L344 312C357.3 312 368 301.3 368 288C368 276.1 359.3 266.1 347.8 264.3L381.2 197.5C383 193.9 383.9 189.9 383.9 185.9C383.9 171.6 372.3 160 358 160L279.9 160L279.9 120L295.9 120C309.2 120 319.9 109.3 319.9 96C319.9 82.7 309.3 72 296 72L280 72L280 56C280 42.7 269.3 32 256 32C242.7 32 232 42.7 232 56L232 72L216 72C202.7 72 192 82.7 192 96C192 109.3 202.7 120 216 120L232 120zM389.8 343.6L398.3 429.1L445.7 488.3L449.9 494C459.1 507.7 464 523.9 464 540.5C464 553.2 461.2 565.3 456.1 576L539.2 576C559.5 576 576 559.5 576 539.2C576 531.9 573.8 524.8 569.8 518.8L544 480.1L544 416.1L557.3 402.8C569.3 390.8 576 374.5 576 357.5L576 256C576 238.3 561.7 224 544 224C526.3 224 512 238.3 512 256L512 272L480 272L480 256C480 238.3 465.7 224 448 224C430.3 224 416 238.3 416 256L416 288C416 310.4 405.8 330.4 389.8 343.6z"/></svg></a>
+        <a href="./index.html" class="logo">Chatrak <i class="fas fa-chess-knight"></i></a>
 
         <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#about">about</a>
-            <a href="Shop/Shop.html">Shop</a>
-            <a href="#review">review</a>
+            <a href="./index.html">Home</a>
+            <a href="./Shop/Shop.html">Shop</a>
+            <a href="#about">About</a>
+            <a href="./news/news.html">News</a>
+            <a href="./Book/Book.html">Book</a>
         </nav>
 
-        <a href="Book/Book.html" class="btn">book a table</a>
+        <button id="login-btn" class="btn" style="font-size: 1.7rem; font-weight: 500;">Sign In</button>
     </header>
 
-    <!-- HOME -->
     <section class="home" id="home">
         <div class="row">
             <div class="content">
                 <h3>Everything related to chess</h3>
-                <a href="#" class="btn">Buy Chess</a>
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem;">
+                    <a href="Book/Book.html?type=tournament" class="btn">Join Tournament</a>
+
+                    <a href="./Game/game.html" class="btn"
+                        style="background: transparent; color: var(--main-color); border: 2px solid var(--main-color);">Play
+                        Puzzle</a>
+                </div>
             </div>
 
             <div class="image">
@@ -59,104 +65,143 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="about" id="about">
-        <h1 class="heading">about us <span>why choose us</span></h1>
+        <h1 class="heading">About Us <span>The Chatrak Legacy</span></h1>
 
-        <div class="row">
-            <div class="image">
-                <img src="image/Chess-Woman.jpg" alt="">
-            </div>
+        <div id="about-static" style="transition: opacity 0.5s ease;">
+            <div class="row">
+                <div class="image">
+                    <img src="image/Chess-Woman.jpg" alt="Woman playing chess">
+                </div>
 
-            <div class="content">
-                <h3 class="title">what's make our game special!</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum laboriosam reprehenderit ipsa id
-                    repellat odio illum, voluptas, necessitatibus assumenda adipisci. Hic, maiores iste? Excepturi illo
-                    dolore mollitia qui quia.</p>
-                <a href="#" class="btn">read more</a>
-                <div class="icons-container">
-                    <div class="icons">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(127, 88, 21)" d="M576 112C576 100.9 570.3 90.6 560.8 84.8C551.3 79 539.6 78.4 529.7 83.4L413.5 141.5L234.1 81.6C226 78.9 217.3 79.5 209.7 83.3L81.7 147.3C70.8 152.8 64 163.9 64 176L64 528C64 539.1 69.7 549.4 79.2 555.2C88.7 561 100.4 561.6 110.3 556.6L226.4 498.5L399.7 556.3C395.4 549.9 391.2 543.2 387.1 536.4C376.1 518.1 365.2 497.1 357.1 474.6L255.9 440.9L255.9 156.4L383.9 199.1L383.9 298.4C414.9 262.6 460.9 240 511.9 240C534.5 240 556.1 244.4 575.9 252.5L576 112zM392 405.9C392 474.8 456.1 556.3 490.6 595.2C502.2 608.2 521.9 608.2 533.5 595.2C568 556.3 632.1 474.8 632.1 405.9C632.1 340.8 578.4 288 512.1 288C445.8 288 392 340.8 392 405.9z"/></svg>
-                        <h3>Places</h3>
-                    </div>
-                    <div class="icons">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(127, 88, 21)" d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM224 160L224 224L288 224L288 160L352 160L352 224L416 224L416 160L480 160L480 224L416 224L416 288L480 288L480 352L416 352L416 416L480 416L480 480L416 480L416 416L352 416L352 480L288 480L288 416L224 416L224 480L160 480L160 416L224 416L224 352L160 352L160 288L224 288L224 224L160 224L160 160L224 160zM288 288L352 288L352 224L288 224L288 288zM288 352L288 288L224 288L224 352L288 352zM352 352L288 352L288 416L352 416L352 352zM352 352L416 352L416 288L352 288L352 352z"/></svg>
-                        <h3>Games</h3>
-                    </div>
-                    <div class="icons">
-                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(127, 88, 21)" d="M416 64C433.7 64 448 78.3 448 96L448 128L480 128C515.3 128 544 156.7 544 192L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 192C96 156.7 124.7 128 160 128L192 128L192 96C192 78.3 206.3 64 224 64C241.7 64 256 78.3 256 96L256 128L384 128L384 96C384 78.3 398.3 64 416 64zM438 225.7C427.3 217.9 412.3 220.3 404.5 231L285.1 395.2L233 343.1C223.6 333.7 208.4 333.7 199.1 343.1C189.8 352.5 189.7 367.7 199.1 377L271.1 449C276.1 454 283 456.5 289.9 456C296.8 455.5 303.3 451.9 307.4 446.2L443.3 259.2C451.1 248.5 448.7 233.5 438 225.7z"/></svg>
-                        <h3>Book</h3>
+                <div class="content">
+                    <h3 class="title">What's Make Our Game Special!</h3>
+                    <p>Chatrak started with a deep passion for chess not just as a game, but as the highest form of
+                        craftsmanship. We believe that every match deserves a proper setting, and every piece is a small
+                        sculpture with its own soul.</p>
+                    <p>Today, our collection includes everything from strict Staunton tournament sets to exotic elm burl
+                        and ebony boards brought from all over the world.</p>
+
+                    <button class="btn" onclick="openInteractiveAbout()">Read More</button>
+
+                    <div class="icons-container">
+                        <a href="./map/map.html" style="display: contents; text-decoration: none;">
+                            <div class="icons">
+                                <i class="fas fa-map-marked-alt" style="font-size: 4rem; color: var(--main-color);"></i>
+                                <h3>Places</h3>
+                            </div>
+                        </a>
+                        <a href="./Game/game.html" style="display: contents; text-decoration: none;">
+                            <div class="icons">
+                                <i class="fas fa-chess-board" style="font-size: 4rem; color: var(--main-color);"></i>
+                                <h3>Games</h3>
+                            </div>
+                        </a>
+                        <a href="./Book/Book.html" style="display: contents; text-decoration: none;">
+                            <div class="icons">
+                                <i class="fas fa-calendar-check" style="font-size: 4rem; color: var(--main-color);"></i>
+                                <h3>Book</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div id="about-interactive" style="display: none; opacity: 0; transition: opacity 0.5s ease; margin-top: 4rem;">
+            <div class="interactive-container"
+                style="display: flex; flex-wrap: wrap; gap: 5rem; align-items: center; background: rgba(127, 88, 21, 0.03); border: var(--border); border-radius: var(--border-radius); padding: 5rem;">
+
+                <div class="chapters-menu" style="flex: 1 1 25rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                    <button class="chapter-btn active" onclick="changeContent('origin', event)">01. The Origin</button>
+                    <button class="chapter-btn" onclick="changeContent('woods', event)">02. Noble Woods</button>
+                    <button class="chapter-btn" onclick="changeContent('craft', event)">03. Master Craft</button>
+                    <button class="chapter-btn" onclick="changeContent('legacy', event)">04. The 1849 Legacy</button>
+
+                    <button class="btn" onclick="closeInteractiveAbout()"
+                        style="margin-top: 3rem; align-self: flex-start;"><i class="fas fa-arrow-left"></i>
+                        Back</button>
+                </div>
+
+                <div class="dynamic-content"
+                    style="flex: 1 1 50rem; display: flex; flex-direction: column; gap: 3rem; position: relative;">
+                    <div class="dynamic-image-wrapper"
+                        style="width: 100%; height: 40rem; overflow: hidden; border-radius: var(--border-radius); border: var(--border);">
+                        <img id="display-image" src="./pattern/Ablojkeq/origin.jpg" alt="" class="fade-in"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="dynamic-text fade-in" id="display-text">
+                        <h3 style="font-size: 3rem; color: var(--main-color); margin-bottom: 1.5rem;">The Soul of the
+                            Game</h3>
+                        <p style="font-size: 1.6rem; line-height: 2; color: var(--main-color);">Chatrak is not just a
+                            store; it is a sanctuary for the royal game. We believe that chess is the ultimate
+                            intersection of art, history, and human intellect. Every match deserves a proper setting,
+                            and every piece is a small sculpture with its own history.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
-    <!-- MENU -->
     <section class="menu" id="menu">
         <h1 class="heading">Exclusive <span>Products</span></h1>
-
         <div class="box-container">
-            <a href="#" class="box">
+            <a href="./Shop/Shop.html#america" class="box">
                 <img src="image/Amerikos199.jpg" alt="">
                 <div class="content">
                     <h3>Polystone Hand-Painted Theme Pieces</h3>
                     <p>American Revolutionary War Hand Painted Theme Chess Set</p>
-                    <span>$199.00</span>
+                    <span>$120.00</span>
                 </div>
             </a>
-
-            <a href="#" class="box">
+            <a href="./Shop/Shop.html#computer" class="box">
                 <img src="image/Elektro.jpg" alt="">
                 <div class="content">
                     <h3>Chess Computer</h3>
                     <p>The Millennium ChessGenius Pro Wood Edition</p>
-                    <span>$259.00</span>
+                    <span>$289.00</span>
                 </div>
             </a>
-
-            <a href="#" class="box">
+            <a href="./Shop/Shop.html#xachakir" class="box">
                 <img src="image/Xachakir199.jpg" alt="">
                 <div class="content">
                     <h3>Polystone Hand-Painted Theme Pieces</h3>
                     <p>Templar Knights Hand Painted Theme Chess Set</p>
-                    <span>$199.00</span>
+                    <span>$120.00</span>
                 </div>
             </a>
-
-            <a href="#" class="box">
+            <a href="./Shop/Shop.html#nabore" class="box">
                 <img src="image/Nabor51.jpg" alt="">
                 <div class="content">
                     <h3>Carry-All Plastic Set</h3>
-                    <p>Standard Club Carry-All Plastic Chess Set Black & Camel Pieces with Vinyl Rollup Board - Green</p>
-                    <span>$51.00</span>
+                    <p>Standard Club Carry-All Plastic Chess Set Black & Camel Pieces with Vinyl Rollup Board - Green
+                    </p>
+                    <span>$50.00</span>
                 </div>
             </a>
-
-            <a href="#" class="box">
+            <a href="./Shop/Shop.html#pirat" class="box">
                 <img src="image/Pirat199.jpg" alt="">
                 <div class="content">
                     <h3>Metal Set With a Case</h3>
                     <p>Pirates & Royal Navy Hand Painted Theme Chess Set</p>
-                    <span>$199.00</span>
+                    <span>$120.00</span>
                 </div>
             </a>
-
-            <a href="#" class="box">
-                <img src="image/Shaxmat1499.jpg" alt="">
+            <a href="./Shop/Shop.html#rob" class="box">
+                <img src="./pattern/Komplektner/tematik/theme-chess-set-robin-hoot-gne-robin-hood-pieces-view-1500x865__61993.original.jpg"
+                    alt="">
                 <div class="content">
-                    <h3>Metal Set With a Case</h3>
-                    <p>Large Napoleon Theme Hand Painted Metal Chess Set with Elm Burl Chess Case</p>
-                    <span>$1499.00</span>
+                    <h3>Polystone Set With a board</h3>
+                    <p>Robin Hood Theme Chess Set</p>
+                    <span>$120.00</span>
                 </div>
             </a>
         </div>
     </section>
 
-    <!-- REVIEW -->
     <section class="review" id="review">
         <h1 class="heading">reviews <span>what people says</span></h1>
-
         <div class="swiper review-slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide box">
@@ -231,57 +276,103 @@
         </div>
     </section>
 
+    <div class="add-review-container"
+        style="max-width: 60rem; margin: 4rem auto 0; text-align: center; border: var(--border); padding: 3rem; border-radius: var(--border-radius); background: #fff;">
+        <h3 style="font-size: 2.5rem; color: var(--main-color); margin-bottom: 2rem;">Leave your review</h3>
+        <input type="text" id="reviewer-name" placeholder="Your Name" class="box-input"
+            style="width: 100%; padding: 1.2rem; margin-bottom: 1.5rem; border: var(--border); border-radius: .5rem; font-size: 1.6rem; color: var(--main-color);">
+        <textarea id="reviewer-text" placeholder="Your Message" rows="4" class="box-input"
+            style="width: 100%; padding: 1.2rem; margin-bottom: 1.5rem; border: var(--border); border-radius: .5rem; font-size: 1.6rem; color: var(--main-color); resize: none;"></textarea>
 
-    <!-- FOOTER -->
+        <div class="rating-stars"
+            style="font-size: 2.5rem; color: var(--main-color); margin-bottom: 2rem; cursor: pointer;">
+            <i class="fas fa-star star-btn" data-value="1"></i>
+            <i class="fas fa-star star-btn" data-value="2"></i>
+            <i class="fas fa-star star-btn" data-value="3"></i>
+            <i class="fas fa-star star-btn" data-value="4"></i>
+            <i class="fas fa-star star-btn" data-value="5"></i>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <button class="btn" id="clear-reviews-btn"
+                style="background: #372929; color: white; border-color: rgb(255, 255, 255); margin-top: 0;">Clear My
+                Reviews</button>
+            <button class="btn" id="submit-review" style="margin-top: 0;">Publish Review</button>
+        </div>
+    </div>
+    <br><br><br>
+
     <section class="footer">
         <div class="box-container">
             <div class="box">
                 <h3>our branches</h3>
-                <a href="#"><i class="fas fa-arrow-right"></i> india</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Armenia</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> Russia</a>
                 <a href="#"><i class="fas fa-arrow-right"></i> USA</a>
-                <a href="#"><i class="fas fa-arrow-right"></i> france</a>
-                <a href="#"><i class="fas fa-arrow-right"></i> africa</a>
-                <a href="#"><i class="fas fa-arrow-right"></i> japan</a>
+                <a href="#"><i class="fas fa-arrow-right"></i> India</a>
             </div>
-
             <div class="box">
                 <h3>quick links</h3>
                 <a href="#home"><i class="fas fa-arrow-right"></i> home</a>
                 <a href="#about"><i class="fas fa-arrow-right"></i> about</a>
                 <a href="#menu"><i class="fas fa-arrow-right"></i> menu</a>
-                <a href="#review"><i class="fas fa-arrow-right"></i> review</a>
-                <a href="#book"><i class="fas fa-arrow-right"></i> book</a>
             </div>
-
             <div class="box">
                 <h3>contact info</h3>
                 <a href="#"><i class="fas fa-phone"></i> +123-456-7890</a>
-                <a href="#"><i class="fas fa-phone"></i> +111-222-3333</a>
-                <a href="#"><i class="fas fa-envelope"></i> coffee@gmail.com</a>
-                <a href="#"><i class="fas fa-envelope"></i> Perú, Lima</a>
+                <a href="#"><i class="fas fa-envelope"></i> Chatrak@gmail.com</a>
             </div>
-
             <div class="box">
-                <h3>contact info</h3>
+                <h3>social info</h3>
                 <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
-                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
                 <a href="#"><i class="fab fa-instagram"></i> instagram</a>
-                <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
-                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
             </div>
         </div>
-
         <div class="credit">created by <span>mr. web designer</span> | all rights reserved</div>
     </section>
 
+    <div id="auth-modal" class="modal-overlay">
+        <div class="auth-box">
+            <span id="close-modal" class="fas fa-times"></span>
+
+            <h2 id="modal-title"
+                style="color: var(--dark-brown); font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">Sign In</h2>
+            <p id="modal-subtitle" style="font-size: 1.5rem; color: #888; margin-bottom: 3rem;">Enter your credentials
+                to continue</p>
+
+            <form id="auth-form">
+                <div class="input-group" id="name-group" style="display: none;">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="auth-name" class="auth-input" placeholder="Your Full Name">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="auth-email" class="auth-input" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="auth-password" class="auth-input" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="auth-btn" id="auth-submit-btn">Login</button>
+            </form>
+
+            <div class="auth-footer">
+                <span id="auth-toggle-text">Don't have an account?</span>
+                <a href="#" id="auth-toggle-link">Sign Up</a>
+            </div>
+            <p id="auth-error"
+                style="color: #d9534f; font-size: 1.3rem; margin-top: 1.5rem; font-weight: 600; display: none;"></p>
+        </div>
+    </div>
 
 
 
-
-    <!-- SWIPER -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-    <!-- Custom JS File Link  -->
     <script src="js/script.js"></script>
 
 </body>

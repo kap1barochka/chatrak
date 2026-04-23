@@ -1,3 +1,6 @@
+/* =========================================
+   ИМПОРТ ШРИФТОВ И ПЕРЕМЕННЫЕ
+========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 :root {
@@ -6,269 +9,21 @@
     --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
     --border: .2rem solid var(--main-color);
     --border-hover: .2rem dashed var(--main-color);
-    --bg-color: #fdfaf0; /* Легкий бежевый фон */
+    --bg-color: #fdfaf0;
 }
 
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: all .2s linear;
-
-
-
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    background: var(--bg-color);
-}
-
-section { padding: 2rem 9%; }
-
-/* --- Глобальные элементы (Кнопки, Заголовки) --- */
-.heading {
-    font-size: 9rem;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: .05rem var(--main-color);
-    letter-spacing: .2rem;
-    position: relative;
-    pointer-events: none;
-}
-.heading span {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    color: var(--main-color);
-    font-size: 3rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: .9rem 1.5rem;
-    border: var(--border);
-    border-radius: var(--border-radius);
-    color: var(--main-color);
-    background: none;
-    cursor: pointer;
-    margin-top: 1rem;
-    font-size: 1.7rem;
-    font-weight: 500;
-}
-.btn:hover {
-    border-radius: var(--border-radius-hover);
-    border: var(--border-hover);
-    background: var(--main-color);
-    color: #fff;
-}
-
-/* --- HEADER --- */
-.header {
-    /* position: fixed;
-    top: 0; left: 0; right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    background: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    padding: 2rem 9%; */
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 8rem; /* Жестко фиксируем высоту */
-    display: flex;
-    align-items: center; /* Центрируем элементы по вертикали внутри высоты */
-    justify-content: space-between;
-    padding: 0 9%; /* Оставляем отступы только по бокам (слева и справа) */
-    background: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    z-index: 1000;
-}
-.header .logo { color: var(--main-color); font-size: 2.3rem; font-weight: bold; }
-.header .logo i { padding-left: .5rem; }
-.header .navbar a { margin: 0 1rem; font-size: 1.7rem; color: var(--main-color); }
-.header .navbar a:hover { border-bottom: .2rem solid var(--main-color); padding-bottom: .5rem; }
-#menu-btn { font-size: 3rem; color: var(--main-color); cursor: pointer; display: none; }
-
-/* --- СЕТКА ТОВАРОВ (Store Grid) --- */
-.store-grid .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 3rem;
-    padding-bottom: 5rem;
-}
-
-.store-box {
-    padding: 3rem;
-    border: var(--border);
-    border-radius: var(--border-radius);
-    text-align: center;
-    background: #fff;
-    cursor: pointer;
-}
-.store-box:hover {
-    border: var(--border-hover);
-    border-radius: var(--border-radius-hover);
-    transform: translateY(-5px);
-}
-.store-box img {
-    height: 20rem;
-    width: 100%;
-    object-fit: contain;
-    margin-bottom: 1.5rem;
-}
-.store-box h3 {
-    font-size: 2.2rem;
-    color: var(--main-color);
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-.store-box .price {
-    font-size: 2rem;
-    color: var(--main-color);
-    font-weight: bold;
-}
-
-/* --- МОДАЛЬНЫЕ ОКНА (Корзина и Детали) --- */
-.modal {
-    display: none; position: fixed; inset: 0;
-    background: rgba(0,0,0,0.7); z-index: 2000; overflow-y: auto;
-}
-.modal-body {
-    background: #fff;
-    width: 90%; max-width: 50rem;
-    margin: 5rem auto; padding: 3rem;
-    border: var(--border);
-    border-radius: var(--border-radius);
-    position: relative;
-}
-.details-card { max-width: 80rem; }
-.details-content { display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; }
-.details-content img { width: 30rem; height: 30rem; object-fit: contain; }
-.det-text { flex: 1; min-width: 25rem; }
-
-.exit {
-    position: absolute; right: 2rem; top: 1rem;
-    font-size: 4rem; color: var(--main-color); cursor: pointer;
-}
-.exit:hover { transform: scale(1.1); }
-
-/* --- КОРЗИНА И ОФОРМЛЕНИЕ --- */
-#cart-list div { font-size: 1.6rem; color: #333; }
-#cart-sum h3 { font-size: 2rem; color: var(--main-color); border-top: var(--border); padding-top: 1rem; }
-
-.box-input {
-    width: 100%; padding: 1.2rem;
-    border-radius: .5rem; font-size: 1.6rem;
-    color: var(--main-color);
-    border: var(--border);
-    margin: .7rem 0;
-    background: none;
-}
-.box-input:focus { border: var(--border-hover); }
-
-.p-wrap { background: #eee; height: 1rem; border-radius: .5rem; margin: 1.5rem 0; overflow: hidden; }
-.p-fill { background: var(--main-color); height: 100%; width: 0; transition: width 0.5s; }
-
-/* --- FOOTER --- */
-.footer { background: #fff; border-top: var(--border); }
-.footer .box-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); gap: 1.5rem; }
-.footer .box-container .box h3 { font-size: 2.5rem; padding: 1rem 0; color: var(--main-color); }
-.footer .box-container .box a { display: block; font-size: 1.5rem; padding: 1rem 0; color: var(--main-color); }
-.footer .box-container .box a i { padding-right: .5rem; }
-.footer .box-container .box a:hover i { padding-right: 2rem; }
-.footer .credit { text-align: center; font-size: 2rem; padding: 2rem 1rem; margin-top: 1rem; color: var(--main-color); border-top: var(--border-hover); }
-
-/* --- АДАПТИВНОСТЬ --- */
-@media (max-width: 768px) {
-    html { font-size: 55%; }
-    #menu-btn { display: initial; }
-    #menu-btn.fa-times { transform: rotate(180deg); }
-    .header .navbar {
-        position: absolute; top: 99%; left: 0; right: 0;
-        background: #fff; border-bottom: var(--border);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-    .header .navbar.active { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-    .header .navbar a { display: block; font-size: 2.2rem; margin: 0; padding: 1.5rem 2rem; }
-    .heading { font-size: 6rem; }
-    .heading span { font-size: 2.3rem; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* --- ВИЗУАЛЬНАЯ СЕТКА КАТЕГОРИЙ (В СТИЛЕ ТАБЛИЦЫ) --- */
+/* =========================================
+   КАТЕГОРИИ И СЕТКА МАГАЗИНА
+========================================= */
 .visual-categories {
-    padding-top: 2rem;
+    padding-top: 5rem;
     padding-bottom: 4rem;
 }
 
 .cat-container {
     max-width: 1200px;
     margin: 0 auto;
-    border: .1rem solid #ccc; /* Внешняя рамка */
+    border: .1rem solid #ccc;
     background: #fff;
 }
 
@@ -297,15 +52,14 @@ section { padding: 2rem 9%; }
     border-right: none;
 }
 
-/* Эффект при наведении и активной категории */
-.cat-box:hover, .cat-box.active {
+.cat-box:hover,
+.cat-box.active {
     box-shadow: inset 0 0 0 .3rem var(--main-color);
     z-index: 10;
 }
 
-/* Центральный блок чуть другого цвета (как на картинке) */
 .cat-box.center-box {
-    background: #fcf9f2; 
+    background: #fcf9f2;
 }
 
 .cat-box h3 {
@@ -324,7 +78,7 @@ section { padding: 2rem 9%; }
 
 .cat-box img {
     width: 100%;
-    height: 180px;
+    height: 275px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -333,22 +87,266 @@ section { padding: 2rem 9%; }
     transform: scale(1.05);
 }
 
-/* Стили для маленьких категорий нижнего ряда */
 .cat-box.small {
     padding: 2rem 1rem;
 }
+
 .cat-box.small h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }
+
 .cat-box.small img {
-    height: 90px;
+    height: 165px;
 }
 
-/* АДАПТИВНОСТЬ ДЛЯ СЕТКИ */
+.store-grid .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 3rem;
+    padding-bottom: 5rem;
+}
+
+.store-box {
+    padding: 3rem;
+    padding-bottom: 9rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    height: 100%;
+}
+
+.store-box:hover {
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
+    transform: translateY(-5px);
+}
+
+.store-box img {
+    height: 20rem;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+.store-box h3 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.store-box .price {
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.store-box .buy-btn {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    width: max-content;
+}
+
+/* =========================================
+   МОДАЛЬНЫЕ ОКНА И FAQ
+========================================= */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.modal-body {
+    background: #fff;
+    width: 90%;
+    max-width: 50rem;
+    margin: 5rem auto;
+    padding: 3rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.details-card {
+    max-width: 80rem;
+}
+
+.details-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.details-content img {
+    width: 30rem;
+    height: 30rem;
+    object-fit: contain;
+}
+
+.det-text {
+    flex: 1;
+    min-width: 25rem;
+}
+
+.exit {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    font-size: 4rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.exit:hover {
+    transform: scale(1.1);
+}
+
+.accordion-container .accordion {
+    background: #fff;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.accordion-container .accordion:hover {
+    border-color: rgba(127, 88, 21, 0.5);
+}
+
+.accordion-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.accordion-heading h3 {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    font-weight: 500;
+    text-transform: none;
+    text-align: left;
+}
+
+.accordion-heading i {
+    font-size: 2rem;
+    color: var(--main-color);
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    background: #fcf9f2;
+    padding: 0 2.5rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-align: left;
+}
+
+.accordion-content p {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.8;
+    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    text-transform: none;
+}
+
+.accordion.active {
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
+}
+
+.accordion.active .accordion-heading i {
+    transform: rotate(180deg);
+}
+
+.accordion.active .accordion-content {
+    max-height: 30rem;
+    opacity: 1;
+}
+
+/* =========================================
+   ПОИСК (ВЫПАДАЮЩИЙ СПИСОК)
+========================================= */
+.search-result-item { 
+    display: flex; align-items: center; gap: 1.5rem; padding: 1rem 1.5rem; 
+    border-bottom: 1px solid #eee; cursor: pointer; transition: 0.2s; background: #fff; 
+}
+.search-result-item:hover { background: #fcf9f2; }
+.search-result-item img { width: 4.5rem; height: 4.5rem; object-fit: contain; }
+.search-result-item h4 { font-size: 1.4rem; color: var(--main-color); margin: 0; text-transform: none; }
+
+/* =========================================
+   БОКОВАЯ КОРЗИНА И ОФОРМЛЕНИЕ ЗАКАЗА
+========================================= */
+.cart-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9998;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.cart-sidebar {
+    position: fixed;
+    top: 0; right: -45rem; 
+    width: 40rem; height: 100vh;
+    background: #fff;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 9999;
+    transition: 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-overlay.active { display: block; opacity: 1; }
+.cart-sidebar.active { right: 0; }
+
+.cart-header {
+    padding: 2rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h3 { font-size: 2.2rem; color: var(--main-color); }
+#close-cart { font-size: 2.5rem; color: var(--main-color); cursor: pointer; transition: 0.2s; }
+#close-cart:hover { transform: rotate(90deg); color: red; }
+
+.cart-items { flex: 1; overflow-y: auto; padding: 2rem; }
+.cart-footer { padding: 2rem; border-top: 1px solid #eee; background: #f9f9f9; }
+
+/* =========================================
+   АДАПТИВНОСТЬ
+========================================= */
 @media (max-width: 991px) {
     .cat-row-top { grid-template-columns: repeat(2, 1fr); }
-    .cat-row-top .cat-box:last-child { grid-column: span 2; border-top: .1rem solid #ccc; border-right: none;}
+    .cat-row-top .cat-box:last-child {
+        grid-column: span 2;
+        border-top: .1rem solid #ccc;
+        border-right: none;
+    }
     .cat-row-bottom { grid-template-columns: repeat(3, 1fr); }
 }
 
@@ -356,4 +354,10 @@ section { padding: 2rem 9%; }
     .cat-row-top, .cat-row-bottom { grid-template-columns: 1fr; }
     .cat-box { border-right: none; border-bottom: .1rem solid #ccc; }
     .cat-box:last-child { border-bottom: none; }
+}
+
+@media (max-width: 450px) {
+    .details-content img { width: 100%; height: auto; }
+    .store-grid .box-container { grid-template-columns: 1fr; }
+    .cart-sidebar { width: 100%; } 
 }
